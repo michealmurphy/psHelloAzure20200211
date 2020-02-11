@@ -1,4 +1,14 @@
 # ASP.NET Core (.NET Framework)
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(575aece5-2645-4605-8a05-aa7f895f4335)'
+    appType: 'webApp'
+    appName: 'ps-starter20200211-2'
+    deployToSlotOrASE: true
+    resourceGroupName: 'ps-starter20200211'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
